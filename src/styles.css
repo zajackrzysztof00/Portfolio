@@ -1,0 +1,60 @@
+:root {
+  --bg: #121212;
+  --text: #e0e0e0;
+  --primary: #bb86fc;
+  --secondary: #03dac6;
+  --link: #8ab4f8;
+}
+
+body {
+  margin: 0;
+  background-color: var(--bg);
+  color: var(--text);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+a {
+  color: var(--link);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1;
+  padding: 1rem 2rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+nav {
+  background-color: #1f1f1f;
+  padding: 1rem 2rem;
+  display: flex;
+  gap: 1.5rem;
+}
+
+nav a {
+  font-weight: bold;
+  color: var(--text);
+}
+
+nav a.active {
+  color: var(--primary);
+}
+
+footer {
+  text-align: center;
+  padding: 1rem 2rem;
+  background-color: #1f1f1f;
+  font-size: 0.9rem;
+  color: #777;
+}
