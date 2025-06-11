@@ -11,7 +11,7 @@ import { Education } from './components/Education'
 
 export default function App() {
   return (
-    <Router>
+    <Router basename="/Portfolio">
       <div className="app">
         <Header />
         <main>
