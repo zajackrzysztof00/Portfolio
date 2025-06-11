@@ -16,10 +16,10 @@ export default function App() {
         <Header />
         <main>
           <Routes>
-            <Route path="/" element={<Main />} />
-            <Route path="/experience" element={<Experience />} />
-            <Route path="/education" element={<Education />} />
-            <Route path="/contact" element={<Contact />} />
+            <Route path="/Portfolio/" element={<Main />} />
+            <Route path="/Portfolio/experience" element={<Experience />} />
+            <Route path="/Portfolio/education" element={<Education />} />
+            <Route path="/Portfolio/contact" element={<Contact />} />
           </Routes>
         </main>
         <Footer />
