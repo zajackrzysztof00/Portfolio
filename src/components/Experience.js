@@ -4,19 +4,33 @@ import { experience } from '../data/cvData';
 export function Experience() {
   return (
     <section>
-      <h2>Experience</h2>
-      {experience.map(({ role, company, duration, location, details }, i) => (
-        <div key={i} style={{ marginBottom: "1rem" }}>
-          <h3>{role}</h3>
-          <p><em>{company} | {location}</em></p>
-          <p><small>{duration}</small></p>
-          <ul>
-            {details.map((d, idx) => (
-              <li key={idx}>{d}</li>
-            ))}
-          </ul>
-        </div>
-      ))}
+      <h1>Professional Experience</h1>
+      <div className="experience-timeline">
+        {experience.map(({ role, company, duration, location, details }, i) => (
+          <div key={i} className="experience-card">
+            <div className="experience-header">
+              <div className="experience-title-section">
+                <h3 className="experience-role">{role}</h3>
+                <div className="experience-company">{company}</div>
+                <div className="experience-meta">
+                  <span className="experience-duration">{duration}</span>
+                  <span className="experience-location">📍 {location}</span>
+                </div>
+              </div>
+              <div className="experience-icon">
+                💼
+              </div>
+            </div>
+            <div className="experience-details">
+              <ul>
+                {details.map((d, idx) => (
+                  <li key={idx}>{d}</li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        ))}
+      </div>
     </section>
   );
 }

@@ -5,13 +5,19 @@ export default function Header() {
   return (
     <nav>
       <NavLink to="/" end className={({ isActive }) => isActive ? 'active' : ''}>
-        Main
+        Home
+      </NavLink>
+      <NavLink to="/experience" className={({ isActive }) => isActive ? 'active' : ''}>
+        Experience
       </NavLink>
       <NavLink to="/education" className={({ isActive }) => isActive ? 'active' : ''}>
         Education
       </NavLink>
-      <NavLink to="/experience" className={({ isActive }) => isActive ? 'active' : ''}>
-        Experience
+      <NavLink to="/skills" className={({ isActive }) => isActive ? 'active' : ''}>
+        Skills
+      </NavLink>
+      <NavLink to="/certifications" className={({ isActive }) => isActive ? 'active' : ''}>
+        Certifications
       </NavLink>
       <NavLink to="/contact" className={({ isActive }) => isActive ? 'active' : ''}>
         Contact
