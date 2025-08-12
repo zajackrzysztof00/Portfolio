@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Krzysztof Zając - CV</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    html, body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      background: #f4f6fa;
+    }
+    body {
+      font-family: 'Inter', Arial, sans-serif;
+      color: #23272f;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f6fa;
+      min-height: 100vh;
+    }
+    .a4 {
+      width: 210mm;
+      min-height: 297mm;
+      max-height: 891mm; /* 3 A4 pages max */
+      margin: 20px auto;
+      background: #fff;
+      box-shadow: 0 8px 32px rgba(44,62,80,0.10), 0 1.5px 4px rgba(44,62,80,0.06);
+      border-radius: 16px;
+      padding: 20mm 15mm;
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+      font-size: 14px;
+      line-height: 1.4;
+    }
+    .header-main {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      border-bottom: 2px solid #e3e7ee;
+      padding-bottom: 12px;
+    }
+    .header-info {
+      flex: 1;
+    }
+    .header-info h1 {
+      font-size: 2.5em;
+      margin: 0 0 6px 0;
+      font-weight: 800;
+      color: #1a1a1a;
+      letter-spacing: 0.5px;
+    }
+    .header-info .subtitle {
+      font-size: 1.2em;
+      color: #2d6cdf;
+      font-weight: 600;
+      margin-bottom: 6px;
+    }
+    .header-info .contact {
+      font-size: 1.0em;
+      color: #444;
+      margin-bottom: 2px;
+    }
+    .header-photo {
+      width: 90px;
+      height: 90px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2.5px solid #e3e7ee;
+      box-shadow: 0 2px 8px rgba(44,62,80,0.08);
+    }
+    .section-title {
+      font-size: 1.3em;
+      color: #2d6cdf;
+      font-weight: 700;
+      margin-bottom: 12px;
+      letter-spacing: 0.2px;
+      border-left: 5px solid #2d6cdf;
+      padding-left: 12px;
+    }
+    .experience-cards {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      margin-bottom: 18px;
+    }
+    .exp-card {
+      background: #f8fafc;
+      border-radius: 12px;
+      box-shadow: 0 2px 6px rgba(44,62,80,0.06);
+      border: 1.5px solid #e3e7ee;
+      padding: 16px 18px 12px 18px;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      transition: box-shadow 0.2s;
+    }
+    .exp-card:hover {
+      box-shadow: 0 4px 16px rgba(44,62,80,0.13);
+      border-color: #2d6cdf;
+    }
+    .exp-card h3 {
+      margin: 0 0 3px 0;
+      font-size: 1.1em;
+      color: #1a1a1a;
+      font-weight: 700;
+    }
+    .exp-card .company {
+      font-weight: 600;
+      color: #2d6cdf;
+      margin-bottom: 2px;
+      font-size: 1.0em;
+    }
+    .exp-card .period {
+      font-size: 0.9em;
+      color: #666;
+      margin-bottom: 4px;
+    }
+    .exp-card ul {
+      margin: 0 0 0 16px;
+      padding: 0;
+      color: #23272f;
+      font-size: 0.9em;
+      line-height: 1.4;
+    }
+    .page-break {
+      page-break-before: always;
+      break-before: page;
+      margin-top: 20px;
+      padding-top: 20px;
+      border-top: 2px dashed #e3e7ee;
+    }
+    @media print {
+      @page {
+        size: A4;
+        margin: 10mm 0 10mm 0;
+      }
+      html, body {
+        width: 210mm;
+        height: 297mm;
+        background: #fff !important;
+      }
+      body {
+        box-shadow: none !important;
+        margin: 0;
+        padding: 0;
+      }
+      .a4 {
+        margin: 0;
+        box-shadow: none !important;
+        border-radius: 0;
+        border: none;
+      }
+      .page-break {
+        margin-top: 0 !important;
+        padding-top: 0 !important;
+        border-top: none !important;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="a4">
+    <div class="header-main">
+      <div class="header-info">
+        <h1>Krzysztof Zając</h1>
+        <div class="subtitle">Software Engineer & Materials Specialist</div>
+        <div class="contact">Email: <a href="mailto:zajackrzysztof00@gmail.com">zajackrzysztof00@gmail.com</a></div>
+        <div class="contact">GitHub: <a href="https://github.com/zajackrzysztof00">zajackrzysztof00</a></div>
+        <div class="contact">Phone: 512 629 632 | Kraków, Poland</div>
+        <div class="contact"><a href="https://zajackrzysztof00.github.io/Portfolio/">Portfolio</a></div>
+      </div>
+      <img class="header-photo" src="photo.jpg" alt="Profile Photo">
+    </div>
+    <div class="section-title">Technical Skills</div>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 16px; margin-bottom: 18px;">
+      <div style="background: #f8fafc; border-radius: 12px; border: 1.5px solid #e3e7ee; box-shadow: 0 2px 8px rgba(44,62,80,0.06); padding: 14px 16px;">
+        <h4 style="margin: 0 0 12px 0; color: #2d6cdf; font-size: 1.1em; font-weight: 600;">Programming Languages</h4>
+        <div style="display: flex; flex-direction: column; gap: 8px;">
+          <div style="display: flex; justify-content: space-between; align-items: center;">
+            <span style="font-weight: 500; font-size: 1.0em;">Python</span>
+            <div style="display: flex; gap: 2px;">
+              <div style="width: 8px; height: 8px; border-radius: 50%; background: #2d6cdf;"></div>
+              <div style="width: 8px; height: 8px; border-radius: 50%; background: #2d6cdf;"></div>
+              <div style="width: 8px; height: 8px; border-radius: 50%; background: #2d6cdf;"></div>
+              <div style="width: 8px; height: 8px; border-radius: 50%; background: #2d6cdf;"></div>
+              <div style="width: 8px; height: 8px; border-radius: 50%; background: #2d6cdf;"></div>
+            </div>
+          </div>
+          <div style="font-size: 0.85em; color: #666; margin-left: 8px;">pandas, NumPy, Flask, TensorFlow, Keras, Scikit-learn, Matplotlib</div>
+          <div style="display: flex; justify-content: space-between; align-items: center;">
+            <span style="font-weight: 500; font-size: 1.0em;">C# (.NET)</span>
+            <div style="display: flex; gap: 2px;">
+              <div style="width: 8px; height: 8px; border-radius: 50%; background: #2d6cdf;"></div>
+              <div style="width: 8px; height: 8px; border-radius: 50%; background: #2d6cdf;"></div>
+              <div style="width: 8px; height: 8px; border-radius: 50%; background: #2d6cdf;"></div>
+              <div style="width: 8px; height: 8px; border-radius: 50%; background: #2d6cdf;"></div>
+              <div style="width: 8px; height: 8px; border-radius: 50%; background: #e3e7ee;"></div>
+            </div>
+          </div>
+          <div style="font-size: 0.9em; color: #666; margin-left: 8px;">.NET Core, Entity Framework, ASP.NET</div>
+          <div style="display: flex; justify-content: space-between; align-items: center;">
+            <span style="font-weight: 500;">Java</span>
+            <div style="display: flex; gap: 2px;">
+              <div style="width: 8px; height: 8px; border-radius: 50%; background: #2d6cdf;"></div>
+              <div style="width: 8px; height: 8px; border-radius: 50%; background: #2d6cdf;"></div>
+              <div style="width: 8px; height: 8px; border-radius: 50%; background: #2d6cdf;"></div>
+              <div style="width: 8px; height: 8px; border-radius: 50%; background: #2d6cdf;"></div>
+              <div style="width: 8px; height: 8px; border-radius: 50%; background: #e3e7ee;"></div>
+            </div>
+          </div>
+          <div style="font-size: 0.9em; color: #666; margin-left: 8px;">Spring, Hibernate, Maven</div>
+          <div style="display: flex; justify-content: space-between; align-items: center;">
+            <span style="font-weight: 500;">JavaScript</span>
+            <div style="display: flex; gap: 2px;">
+              <div style="width: 8px; height: 8px; border-radius: 50%; background: #2d6cdf;"></div>
+              <div style="width: 8px; height: 8px; border-radius: 50%; background: #2d6cdf;"></div>
+              <div style="width: 8px; height: 8px; border-radius: 50%; background: #2d6cdf;"></div>
+              <div style="width: 8px; height: 8px; border-radius: 50%; background: #2d6cdf;"></div>
+              <div style="width: 8px; height: 8px; border-radius: 50%; background: #e3e7ee;"></div>
+            </div>
+          </div>
+          <div style="font-size: 0.9em; color: #666; margin-left: 8px;">React</div>
+        </div>
+      </div>
+      <div style="background: #f8fafc; border-radius: 12px; border: 1.5px solid #e3e7ee; box-shadow: 0 2px 8px rgba(44,62,80,0.06); padding: 20px 18px;">
+        <h4 style="margin: 0 0 16px 0; color: #2d6cdf; font-size: 1.1em; font-weight: 600;">Databases & Big Data</h4>
+        <div style="display: flex; flex-direction: column; gap: 10px;">
+          <div>
+            <div style="font-weight: 500; margin-bottom: 4px;">Relational Databases (SQL)</div>
+            <div style="font-size: 0.9em; color: #666;">MySQL, PostgreSQL, SQLite — schema design, complex joins, window functions, indexing, query optimization</div>
+          </div>
+          <div>
+            <div style="font-weight: 500; margin-bottom: 4px;">Big Data Technologies</div>
+            <div style="font-size: 0.9em; color: #666;">Hadoop (HDFS, MapReduce), Hive — distributed data processing and querying large datasets</div>
+          </div>
+          <div>
+            <div style="font-weight: 500; margin-bottom: 4px;">NoSQL Databases</div>
+            <div style="font-size: 0.9em; color: #666;">MongoDB, DynamoDB — schema modeling, aggregation pipelines</div>
+          </div>
+          <div>
+            <div style="font-weight: 500; margin-bottom: 4px;">Data Integration</div>
+            <div style="font-size: 0.9em; color: #666;">ETL workflows from CSV/JSON using Python libraries (pandas, pymongo, mysql-connector)</div>
+          </div>
+        </div>
+      </div>
+      <div style="background: #f8fafc; border-radius: 12px; border: 1.5px solid #e3e7ee; box-shadow: 0 2px 8px rgba(44,62,80,0.06); padding: 20px 18px;">
+        <h4 style="margin: 0 0 16px 0; color: #2d6cdf; font-size: 1.1em; font-weight: 600;">Web & Cloud</h4>
+        <div style="display: flex; flex-direction: column; gap: 12px;">
+          <div style="display: flex; justify-content: space-between; align-items: center;">
+            <span style="font-weight: 500;">HTML</span>
+            <div style="display: flex; gap: 2px;">
+              <div style="width: 8px; height: 8px; border-radius: 50%; background: #2d6cdf;"></div>
+              <div style="width: 8px; height: 8px; border-radius: 50%; background: #2d6cdf;"></div>
+              <div style="width: 8px; height: 8px; border-radius: 50%; background: #2d6cdf;"></div>
+              <div style="width: 8px; height: 8px; border-radius: 50%; background: #2d6cdf;"></div>
+              <div style="width: 8px; height: 8px; border-radius: 50%; background: #2d6cdf;"></div>
+            </div>
+          </div>
+          <div style="display: flex; justify-content: space-between; align-items: center;">
+            <span style="font-weight: 500;">CSS</span>
+            <div style="display: flex; gap: 2px;">
+              <div style="width: 8px; height: 8px; border-radius: 50%; background: #2d6cdf;"></div>
+              <div style="width: 8px; height: 8px; border-radius: 50%; background: #2d6cdf;"></div>
+              <div style="width: 8px; height: 8px; border-radius: 50%; background: #2d6cdf;"></div>
+              <div style="width: 8px; height: 8px; border-radius: 50%; background: #2d6cdf;"></div>
+              <div style="width: 8px; height: 8px; border-radius: 50%; background: #e3e7ee;"></div>
+            </div>
+          </div>
+          <div style="display: flex; justify-content: space-between; align-items: center;">
+            <span style="font-weight: 500;">LaTeX</span>
+            <div style="display: flex; gap: 2px;">
+              <div style="width: 8px; height: 8px; border-radius: 50%; background: #2d6cdf;"></div>
+              <div style="width: 8px; height: 8px; border-radius: 50%; background: #2d6cdf;"></div>
+              <div style="width: 8px; height: 8px; border-radius: 50%; background: #2d6cdf;"></div>
+              <div style="width: 8px; height: 8px; border-radius: 50%; background: #2d6cdf;"></div>
+              <div style="width: 8px; height: 8px; border-radius: 50%; background: #e3e7ee;"></div>
+            </div>
+          </div>
+          <div style="display: flex; justify-content: space-between; align-items: center;">
+            <span style="font-weight: 500;">AWS</span>
+            <div style="display: flex; gap: 2px;">
+              <div style="width: 8px; height: 8px; border-radius: 50%; background: #2d6cdf;"></div>
+              <div style="width: 8px; height: 8px; border-radius: 50%; background: #2d6cdf;"></div>
+              <div style="width: 8px; height: 8px; border-radius: 50%; background: #2d6cdf;"></div>
+              <div style="width: 8px; height: 8px; border-radius: 50%; background: #e3e7ee;"></div>
+              <div style="width: 8px; height: 8px; border-radius: 50%; background: #e3e7ee;"></div>
+            </div>
+          </div>
+          <div style="font-size: 0.9em; color: #666; margin-left: 8px;">S3, Lambda, CloudWatch, API Gateway</div>
+        </div>
+      </div>
+      <div style="background: #f8fafc; border-radius: 12px; border: 1.5px solid #e3e7ee; box-shadow: 0 2px 8px rgba(44,62,80,0.06); padding: 20px 18px;">
+        <h4 style="margin: 0 0 16px 0; color: #2d6cdf; font-size: 1.1em; font-weight: 600;">Version Control & Other</h4>
+        <div style="display: flex; flex-direction: column; gap: 12px;">
+          <div style="display: flex; justify-content: space-between; align-items: center;">
+            <span style="font-weight: 500;">Git</span>
+            <div style="display: flex; gap: 2px;">
+              <div style="width: 8px; height: 8px; border-radius: 50%; background: #2d6cdf;"></div>
+              <div style="width: 8px; height: 8px; border-radius: 50%; background: #2d6cdf;"></div>
+              <div style="width: 8px; height: 8px; border-radius: 50%; background: #2d6cdf;"></div>
+              <div style="width: 8px; height: 8px; border-radius: 50%; background: #2d6cdf;"></div>
+              <div style="width: 8px; height: 8px; border-radius: 50%; background: #e3e7ee;"></div>
+            </div>
+          </div>
+          <div style="display: flex; justify-content: space-between; align-items: center;">
+            <span style="font-weight: 500;">GitHub</span>
+            <div style="display: flex; gap: 2px;">
+              <div style="width: 8px; height: 8px; border-radius: 50%; background: #2d6cdf;"></div>
+              <div style="width: 8px; height: 8px; border-radius: 50%; background: #2d6cdf;"></div>
+              <div style="width: 8px; height: 8px; border-radius: 50%; background: #2d6cdf;"></div>
+              <div style="width: 8px; height: 8px; border-radius: 50%; background: #2d6cdf;"></div>
+              <div style="width: 8px; height: 8px; border-radius: 50%; background: #e3e7ee;"></div>
+            </div>
+          </div>
+          <div style="display: flex; justify-content: space-between; align-items: center;">
+            <span style="font-weight: 500;">Docker</span>
+            <div style="display: flex; gap: 2px;">
+              <div style="width: 8px; height: 8px; border-radius: 50%; background: #2d6cdf;"></div>
+              <div style="width: 8px; height: 8px; border-radius: 50%; background: #2d6cdf;"></div>
+              <div style="width: 8px; height: 8px; border-radius: 50%; background: #2d6cdf;"></div>
+              <div style="width: 8px; height: 8px; border-radius: 50%; background: #2d6cdf;"></div>
+              <div style="width: 8px; height: 8px; border-radius: 50%; background: #e3e7ee;"></div>
+            </div>
+          </div>
+          <div style="display: flex; justify-content: space-between; align-items: center;">
+            <span style="font-weight: 500;">VBA</span>
+            <div style="display: flex; gap: 2px;">
+              <div style="width: 8px; height: 8px; border-radius: 50%; background: #2d6cdf;"></div>
+              <div style="width: 8px; height: 8px; border-radius: 50%; background: #2d6cdf;"></div>
+              <div style="width: 8px; height: 8px; border-radius: 50%; background: #2d6cdf;"></div>
+              <div style="width: 8px; height: 8px; border-radius: 50%; background: #e3e7ee;"></div>
+              <div style="width: 8px; height: 8px; border-radius: 50%; background: #e3e7ee;"></div>
+            </div>
+          </div>
+          <div style="display: flex; justify-content: space-between; align-items: center;">
+            <span style="font-weight: 500;">Lua</span>
+            <div style="display: flex; gap: 2px;">
+              <div style="width: 8px; height: 8px; border-radius: 50%; background: #2d6cdf;"></div>
+              <div style="width: 8px; height: 8px; border-radius: 50%; background: #2d6cdf;"></div>
+              <div style="width: 8px; height: 8px; border-radius: 50%; background: #2d6cdf;"></div>
+              <div style="width: 8px; height: 8px; border-radius: 50%; background: #e3e7ee;"></div>
+              <div style="width: 8px; height: 8px; border-radius: 50%; background: #e3e7ee;"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="page-break"></div>
+    <div class="section-title">Experience</div>
+    <div class="experience-cards">
+      <div class="exp-card">
+        <h3>Validation Engineer</h3>
+        <div class="company">BWI Poland Technologies sp. z o.o.</div>
+        <div class="period">2024 – Ongoing | Balice, Poland</div>
+        <ul>
+          <li>Developing calculation methods and software solutions for validation processes</li>
+          <li>Python programming for test signal generation and testing machine automation</li>
+          <li>Programming in Python for test automation and data analysis workflows</li>
+          <li>VBA development for Excel-based calculation tools and document management systems</li>
+          <li>Statistical data analysis and reporting using Python libraries (pandas, NumPy, Matplotlib)</li>
+          <li>Training employees in new software tools and automated calculation methods</li>
+          <li>Developing automated test result processing and report generation systems</li>
+          <li>Implementation of resource-efficient CNN models and LSTM networks for data analysis (Keras, TensorFlow)</li>
+        </ul>
+      </div>
+      <div class="exp-card">
+        <h3>Chassis Trainee</h3>
+        <div class="company">BWI Poland Technologies sp. z o.o.</div>
+        <div class="period">2022 – 2024 | Balice, Poland</div>
+        <ul>
+          <li>VBA development for automated document management and data processing workflows</li>
+          <li>Statistical data analysis and visualization using Python (pandas, Matplotlib, SciPy)</li>
+          <li>SQL database operations for test equipment and test management</li>
+          <li>Creating automated test reports and data processing scripts</li>
+          <li>Developing calculation algorithms for chassis component validation</li>
+        </ul>
+      </div>
+    </div>
+    <!-- Add more sections below as needed -->
+    <div class="section-title">Education</div>
+    <div style="display: flex; flex-wrap: wrap; gap: 18px;">
+      <div style="background: #f8fafc; border-radius: 12px; border: 1.5px solid #e3e7ee; box-shadow: 0 2px 8px rgba(44,62,80,0.06); padding: 18px 16px; flex: 1 1 260px; min-width: 260px; max-width: 100%;">
+        <h3 style="margin:0 0 4px 0; color:#2d6cdf;">Postgraduate Studies - Software Development Methods</h3>
+        <div style="font-weight:600; color:#23272f;">AGH University of Science and Technology</div>
+        <div style="font-size:0.98em; color:#666;">Faculty of Computer Science | 2024 – Ongoing</div>
+      </div>
+      <div style="background: #f8fafc; border-radius: 12px; border: 1.5px solid #e3e7ee; box-shadow: 0 2px 8px rgba(44,62,80,0.06); padding: 18px 16px; flex: 1 1 260px; min-width: 260px; max-width: 100%;">
+        <h3 style="margin:0 0 4px 0; color:#2d6cdf;">Master's Degree - Metal Engineering</h3>
+        <div style="font-weight:600; color:#23272f;">AGH University of Science and Technology</div>
+        <div style="font-size:0.98em; color:#666;">Faculty of Metal Engineering and Industrial Computer Science | 2023 – 2024</div>
+        <div style="font-size:0.97em; color:#444; margin-top:6px;">Thesis: Formation and characterization of morphology of binary alloy films with a composition gradient.</div>
+      </div>
+      <div style="background: #f8fafc; border-radius: 12px; border: 1.5px solid #e3e7ee; box-shadow: 0 2px 8px rgba(44,62,80,0.06); padding: 18px 16px; flex: 1 1 260px; min-width: 260px; max-width: 100%;">
+        <h3 style="margin:0 0 4px 0; color:#2d6cdf;">Engineering Degree - Materials Engineering</h3>
+        <div style="font-weight:600; color:#23272f;">AGH University of Science and Technology</div>
+        <div style="font-size:0.98em; color:#666;">Faculty of Metal Engineering and Industrial Computer Science | 2019 – 2023</div>
+        <div style="font-size:0.97em; color:#444; margin-top:6px;">Thesis: Analysis of diffraction images of steel after hardening in the context of registering residual austenite and assessing martensite tetragonality.</div>
+      </div>
+    </div>
+    <div class="page-break"></div>
+    <div class="section-title">Professional Development and Training</div>
+    <div style="display: flex; flex-wrap: wrap; gap: 16px; margin-bottom: 18px;">
+      <div style="background: #f8fafc; border-radius: 12px; border: 1.5px solid #e3e7ee; box-shadow: 0 2px 6px rgba(44,62,80,0.06); padding: 16px 18px; flex: 1 1 260px; min-width: 260px; max-width: 100%;">
+        <h4 style="margin: 0 0 8px 0; color: #2d6cdf; font-size: 1.1em; font-weight: 600;">Data Software Engineering</h4>
+        <div style="font-size: 0.85em; color: #666; margin-bottom: 8px;">EPAM Campus</div>
+        <div style="font-size: 0.9em; color: #444; line-height: 1.4;">Python, SQL, Hadoop</div>
+      </div>
+      <div style="background: #f8fafc; border-radius: 12px; border: 1.5px solid #e3e7ee; box-shadow: 0 2px 6px rgba(44,62,80,0.06); padding: 16px 18px; flex: 1 1 260px; min-width: 260px; max-width: 100%;">
+        <h4 style="margin: 0 0 8px 0; color: #2d6cdf; font-size: 1.1em; font-weight: 600;">Understanding Python Sentiment Analysis Methodology</h4>
+        <div style="font-size: 0.85em; color: #666; margin-bottom: 8px;">Alison.com Online Course</div>
+        <div style="font-size: 0.9em; color: #444; line-height: 1.4;">Natural Language Processing, Sentiment Analysis, Python Implementation</div>
+      </div>
+      <div style="background: #f8fafc; border-radius: 12px; border: 1.5px solid #e3e7ee; box-shadow: 0 2px 6px rgba(44,62,80,0.06); padding: 16px 18px; flex: 1 1 260px; min-width: 260px; max-width: 100%;">
+        <h4 style="margin: 0 0 8px 0; color: #2d6cdf; font-size: 1.1em; font-weight: 600;">Data Visualization with Python and Matplotlib</h4>
+        <div style="font-size: 0.85em; color: #666; margin-bottom: 8px;">Alison.com Online Course</div>
+        <div style="font-size: 0.9em; color: #444; line-height: 1.4;">Python Data Visualization, Matplotlib Library, Chart Creation</div>
+      </div>
+      <div style="background: #f8fafc; border-radius: 12px; border: 1.5px solid #e3e7ee; box-shadow: 0 2px 6px rgba(44,62,80,0.06); padding: 16px 18px; flex: 1 1 260px; min-width: 260px; max-width: 100%;">
+        <h4 style="margin: 0 0 8px 0; color: #2d6cdf; font-size: 1.1em; font-weight: 600;">Certification in Analysis of measurement systems according to MSA v.4 requirements</h4>
+        <div style="font-size: 0.85em; color: #666; margin-bottom: 8px;">PRONOST Training</div>
+        <div style="font-size: 0.9em; color: #444; line-height: 1.4;">Measurement Systems Analysis (MSA) v4 evaluates the accuracy, precision, and reliability of measurement processes to ensure data quality and consistency in manufacturing or inspection.</div>
+      </div>
+      <div style="background: #f8fafc; border-radius: 12px; border: 1.5px solid #e3e7ee; box-shadow: 0 2px 6px rgba(44,62,80,0.06); padding: 16px 18px; flex: 1 1 260px; min-width: 260px; max-width: 100%;">
+        <h4 style="margin: 0 0 8px 0; color: #2d6cdf; font-size: 1.1em; font-weight: 600;">Certification in Statistical process control according to SPC v.2 requirements</h4>
+        <div style="font-size: 0.85em; color: #666; margin-bottom: 8px;">PRONOST Training</div>
+        <div style="font-size: 0.9em; color: #444; line-height: 1.4;">Statistical Process Control (SPC) v2 uses statistical methods and control charts to monitor, control, and improve process performance by detecting and reducing variability.</div>
+      </div>
+    </div>
+    <div class="section-title">Languages</div>
+    <div style="display: flex; flex-wrap: wrap; gap: 16px; margin-bottom: 18px;">
+      <div style="flex: 1; min-width: 200px;">
+        <div style="font-weight: 600; color: #23272f; margin-bottom: 6px; font-size: 1.0em;">English</div>
+        <div style="font-size: 0.9em; color: #666;">Fluent</div>
+      </div>
+      <div style="flex: 1; min-width: 200px;">
+        <div style="font-weight: 600; color: #23272f; margin-bottom: 6px; font-size: 1.0em;">German</div>
+        <div style="font-size: 0.9em; color: #666;">Beginner</div>
+      </div>
+    </div>
+    <div class="section-title">Strengths</div>
+    <div style="display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 18px;">
+      <span style="background-color: #2d6cdf !important; color: white !important; padding: 8px 14px; border: 2px solid #2d6cdf !important; font-size: 0.85em; font-weight: 500;">Hard-working</span>
+      <span style="background-color: #2d6cdf !important; color: white !important; padding: 8px 14px; border: 2px solid #2d6cdf !important; font-size: 0.85em; font-weight: 500;">Eye for detail</span>
+      <span style="background-color: #2d6cdf !important; color: white !important; padding: 8px 14px; border: 2px solid #2d6cdf !important; font-size: 0.85em; font-weight: 500;">Motivator & Leader</span>
+      <span style="background-color: #2d6cdf !important; color: white !important; padding: 8px 14px; border: 2px solid #2d6cdf !important; font-size: 0.85em; font-weight: 500;">Creativity</span>
+      <span style="background-color: #2d6cdf !important; color: white !important; padding: 8px 14px; border: 2px solid #2d6cdf !important; font-size: 0.85em; font-weight: 500;">Self-discipline</span>
+      <span style="background-color: #2d6cdf !important; color: white !important; padding: 8px 14px; border: 2px solid #2d6cdf !important; font-size: 0.85em; font-weight: 500;">Statistical Analysis</span>
+    </div>
+  </div>
+</body>
+</html>
