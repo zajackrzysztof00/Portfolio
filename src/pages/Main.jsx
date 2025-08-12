@@ -3,7 +3,6 @@ import { Experience } from '../components/Experience'
 import { experience } from '../data/cvData'
 import { skills } from '../data/cvData'
 import { Education } from '../components/Education'
-import ProjectCard from '../components/ProjectCard'
 
 export default function About() {
   // Simple tech icon component with fallback
@@ -44,29 +43,7 @@ export default function About() {
       />
     )
   }
-  const projects = [
-  {
-    title: 'X-Ray-Diffraction',
-    description: 'Analysis and visualization of X-ray diffraction data.',
-    url: 'https://github.com/zajackrzysztof00/X-Ray-Diffraction',
-  },
-  {
-    title: 'Key-words-learning-AI',
-    description: 'An AI project focused on keyword learning algorithms.',
-    url: 'https://github.com/zajackrzysztof00/Key-words-learning-AI',
-  },
-  {
-    title: 'AI-Model-from-scratch',
-    description: 'Building an AI model from scratch using Python.',
-    url: 'https://github.com/zajackrzysztof00/AI-Model-from-scratch',
-  },
-  {
-    title: 'Rick-and-Morty',
-    description: 'React app using Rick and Morty API for character exploration.',
-    url: 'https://github.com/zajackrzysztof00/Rick-and-Morty',
-    pageUrl: 'https://zajackrzysztof00.github.io/Rick-and-Morty/'
-  },
-];
+
   return (
     <section>
       <div className="hero-section">
@@ -128,11 +105,6 @@ export default function About() {
           <span> 512 629 632 | Kraków, Poland</span>
         </div>
       </div>
-      
-      <h2>Featured Projects</h2>
-      {projects.map((p) => (
-        <ProjectCard key={p.title} {...p} />
-      ))}
     </section>
   )
 }

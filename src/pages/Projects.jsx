@@ -3,6 +3,11 @@ import ProjectCard from '../components/ProjectCard'
 
 const projects = [
   {
+    title: 'HeightMap-Generator',
+    description: 'Heightmap Generator A sophisticated terrain heightmap generator with multiple generation methods and a user-friendly interface.',
+    url: 'https://github.com/zajackrzysztof00/HeightMap-Generator',
+  },
+  {
     title: 'X-Ray-Diffraction',
     description: 'Analysis and visualization of X-ray diffraction data.',
     url: 'https://github.com/zajackrzysztof00/X-Ray-Diffraction',
@@ -21,12 +26,7 @@ const projects = [
     title: 'Rick-and-Morty',
     description: 'React app using Rick and Morty API for character exploration.',
     url: 'https://github.com/zajackrzysztof00/Rick-and-Morty',
-  },
-  {
-    title: 'FrontEnd-BackEnd',
-    description: 'Fullstack project with React frontend and .NET backend.',
-    url: 'https://github.com/zajackrzysztof00/FrontEnd-BackEnd',
-  },
+  }
 ]
 
 export default function Projects() {

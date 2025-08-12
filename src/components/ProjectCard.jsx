@@ -3,6 +3,9 @@ import React from 'react'
 export default function ProjectCard({ title, description, url }) {
   // Simple mapping for project icons based on title/technology
   const getProjectIcon = (title) => {
+    if (title.toLowerCase().includes('heightmap') || title.toLowerCase().includes('terrain')) {
+      return '🗺️'
+    }
     if (title.toLowerCase().includes('x-ray') || title.toLowerCase().includes('diffraction')) {
       return '🔬'
     }
